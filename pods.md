@@ -6,3 +6,34 @@ and a specification for how to run the containers. A Pod's contents are always c
 A Pod models an application-specific "logical host": it contains one or more application containers which are relatively tightly coupled.
 In non-cloud contexts, applications executed on the same physical or virtual machine are analogous to cloud applications executed on the 
 same logical host.
+
+
+  
+## SOME COMMANDS FOR PODS
+
+
+``` sh
+
+      # show all pods
+      kubectl get pods
+      
+      # edit pod defination file
+      vim pod.yml
+      
+      # create pod from pod defination file
+      kubectl create -f pod.yml 
+      
+      # edit  pod from pod defination file
+      vim pod.yml
+      
+      # update after edit pod defination file
+      kubectl apply -f pod.yml 
+      
+      # delete pod
+      kubectl delete pod nginx 
+      
+      #inspect pod
+      kubectl describe pods nginx 
+
+```
+
